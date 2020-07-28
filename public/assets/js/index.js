@@ -55,7 +55,7 @@ const handleNoteSave = function () {
   const newNote = {
     title: $noteTitle.val(),
     text: $noteText.val(),
-    id: Math.floor(Math.random() * 100)
+    id: parseInt(Math.floor(Math.random() * 100))
   };
 
   saveNote(newNote).then(() => {
