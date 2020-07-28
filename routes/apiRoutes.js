@@ -31,9 +31,11 @@ module.exports = app => {
                 if (error) {
                     return console.log("error! " + err)
                 }
-                res.json(console.log("Posted"));
-            })
+                res.end();
+            });
+
         });
+
     });
 
     app.delete("/api/notes/:id", (req, res) => {
@@ -60,10 +62,10 @@ module.exports = app => {
                 if (error) {
                     return console.log("error! " + err)
                 }
-                res.json(console.log("Posted"));
+                res.end();
             })
 
         });
-
+        res.end;
     })
 };
